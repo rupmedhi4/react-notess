@@ -48,16 +48,16 @@ export default function TextForm(props) {
                         style={{background : props.mode==="light"?"white":"grey", color: props.mode==="light"?"#042743":"white"}}
                     ></textarea>
                 </div>
-                <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to UpperCase</button>
-                <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to LowerCase</button>
-                <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</button>
-                <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove  Extra space</button>
-                <button className="btn btn-primary mx-1" onClick={handleClearText}>Clear Text</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to LowerCase</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove  Extra space</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={handleClearText}>Clear Text</button>
 
             </div>
             <div className='container my-3' style={{color:props.mode==="light"?"#042743":"white"}}>
                 <h2>Your text summery</h2>
-                <p>{text.split(" ").length - 1}Words and {text.length}Characters </p>
+                <p>{text.split(" ").filter((element)=>{return element.length!==0}).length}Words and {text.length}Characters </p>
                 <p>{0.008 * text.split(" ").length}Minutes Read </p>
                 <h1>preview</h1>
                 <p>{text.length>0 ?text:"enter your text to preview it here"}</p>

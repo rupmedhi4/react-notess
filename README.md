@@ -56,6 +56,26 @@ Answer: If there is no matching Provider in the component tree for the context, 
 
 
 
+23.	What is the purpose of the useReducer hook in React?
+Answer: The useReducer hook is used to manage more complex state logic in a React component by specifying how the state is updated based on an action.
+24.	How does useReducer differ from useState?
+Answer: While useState is suitable for managing simple state updates, useReducer is more appropriate when the state logic is complex, involves multiple sub-values, or requires calculations based on the previous state.
+25.	Explain the syntax of useReducer.
+Answer: The useReducer hook takes two arguments: the reducer function and the initial state. It returns an array containing the current state and a dispatch function.
+ 
+
+26.	What is reducer?
+	Reducer is a pure function that take in a state and action and return a new state 
+27.	Explain the role of the dispatch function returned by useReducer.
+Answer: The dispatch function is used to send actions to the reducer, triggering state updates. It takes an action object as an argument, and the reducer processes the action to determine the new state.
+28.	What is the purpose of the action object in useReducer?
+Answer: The action object describes the type of update to be performed on the state. It typically has a type property and may include additional data necessary for the update.
+
+29.	How do you handle multiple actions with a single useReducer?
+Answer: The reducer function can include a switch statement to handle different action types. Each case corresponds to a specific type of action, allowing you to manage multiple actions in one reducer.
+30.	What are the advantages of using useReducer over useState in certain scenarios?
+Answer: useReducer is advantageous when dealing with complex state logic, multiple sub-values, or when the next state depends on the previous state. It provides a cleaner way to manage state updates in such scenarios.
+
 
 
 
